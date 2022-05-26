@@ -24,9 +24,10 @@ public class ImplementacaoFilaThread extends Thread{
 		
 		
 		while(true) {
-			java.util.Iterator iteracao = pilha_fila.iterator();//Intereagindo com a lista
 			
-		synchronized (iteracao) {//Bloqueando o acesso a essa lista para outro processo 
+		synchronized (pilha_fila) {//Bloqueando o acesso a essa lista para outro processo 
+			
+			java.util.Iterator iteracao = pilha_fila.iterator();//Interagindo com a lista
 			
 			while (iteracao.hasNext()) {//Enquanto tiver dados na lista vai processar
 				
